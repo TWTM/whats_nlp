@@ -71,6 +71,7 @@ if uploaded_file is not None:
 
     # Reamostre os dados para obter o número de mensagens por dia
     chat_df['datetime'] = pd.to_datetime(chat_df['datetime'])
+    chat_df.reset_index(inplace=True)
     messages_per_day = chat_df.resample('D', on='datetime').size()
 
     # Plote o número de mensagens por dia
