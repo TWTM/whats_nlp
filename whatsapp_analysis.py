@@ -13,6 +13,7 @@ import re
 from datetime import datetime
 import matplotlib.pyplot as plt
 from collections import Counter
+import nltk
 from nltk.corpus import stopwords
 from bertopic import BERTopic
 from sentence_transformers import SentenceTransformer
