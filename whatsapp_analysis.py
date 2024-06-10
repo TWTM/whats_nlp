@@ -72,11 +72,11 @@ if uploaded_file is not None:
     # Reamostre os dados para obter o número de mensagens por dia
     chat_df['datetime'] = pd.to_datetime(chat_df['datetime'])
     chat_df.reset_index(inplace=True)
-    messages_per_day = chat_df.resample('D', on='datetime').size()
+    # messages_per_day = chat_df.resample('D', on='datetime').size()
 
     # Plote o número de mensagens por dia
-    st.write("Número de Mensagens por Dia")
-    st.line_chart(messages_per_day)
+    # st.write("Número de Mensagens por Dia")
+    # st.line_chart(messages_per_day)
 
     # Conte o número de mensagens enviadas por cada usuário
     user_message_counts = chat_df['user'].value_counts()
